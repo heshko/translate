@@ -1,0 +1,18 @@
+img{
+    width: 40px;
+    height: 40px;
+    margin-left: 2px;
+    margin-bottom:59px
+}
+textarea{
+    width: 400px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: blue
+}
+#button{
+width: 862px;
+background-color: rgb(39, 39, 39);
+color: white
+}
