@@ -1,14 +1,22 @@
-
-var app = angular.module("myApp",["ngRoute"])
+var app =angular.module("FirebaseApp",["ngRoute","firebase"])
 app.config(["$routeProvider",function($routeProvider){
-$routeProvider
-.when("/home",{
-  templateUrl:"item1.html",
-  controller:"control1"
-})
-.when("/antoon",{
-  templateUrl:"item2.html",
-  controller:"control2"
-})
-
+    $routeProvider
+    .when("/",{
+        templateUrl:"/templates/home.html",
+        controller:"firstController"
+    })
+    .when("/sign-up",{
+        templateUrl:"/templates/sign-up.html",
+        controller:"SignUpController"
+    })
+    .when("/login",{
+        templateUrl:"/templates/login.html",
+        controller:"loginController"
+    })
+    .when("/translate",{
+        templateUrl:"translate.html",
+        controller:"control1"
+    })
+    
+    
 }])

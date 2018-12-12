@@ -1,35 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="FirebaseApp">
 
 <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>test-10</title>
+    <title>Firebase</title>
 </head>
 
 <body>
-  <a href="#!/home">home</a>
-  <a href="#!/antoon">antoon</a>
- <div ng-view>
+    <nav ng-controller="AuthCtrl">
+        <li>
+            <a href="#!/">Home</a>
+        </li>
+        <li ng-if="!user">
+                <a href="#!/sign-up">Sign up</a>
+            </li>
+        <li ng-if="!user">
+            <a href="#!/login">login</a>
+        </li>
+        <li ng-if="user">
+            <a href ng-click="signOut()">Sign Out</a>
+        </li>
+    </nav>
+    <main ng-view>
 
- </div>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-      <script>
-       
-      </script>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
-        <script src="https://code.angularjs.org/1.7.5/angular-route.min.js"></script>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.5/angular-route.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyBXhKif_ucYROz7nDY3XPm6YZOOiQBPMbg",
+              authDomain: "komvux-firebasel.firebaseapp.com",
+              databaseURL: "https://komvux-firebasel.firebaseio.com",
+              projectId: "komvux-firebasel",
+              storageBucket: "komvux-firebasel.appspot.com",
+              messagingSenderId: "935272282223"
+            };
+            firebase.initializeApp(config);
+          </script>
     <script src="app.js"></script>
     <script src="controller.js"></script>
-    
+
 </body>
 
 </html>
