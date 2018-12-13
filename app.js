@@ -21,7 +21,7 @@ app.config(["$routeProvider",function($routeProvider){
     
     
 }])
-=======
+
 function speak() {
   var x = document.getElementById("t")
   var text = x.value;
@@ -38,7 +38,7 @@ function startRecording() {
     recognition.continuous = false; // för att recording stop om 10 sek // om det är 
     recognition.interimResults = true;// om det är true så det skriva som jag säger 
 
-    recognition.lang = document.getElementById("voice-Change-Language").value;// jag gjorde det för att byta språk 
+    recognition.lang = document.getElementById("chang-språk-1").value;// jag gjorde det för att byta språk 
     recognition.start(); // för att börjar rccording
 
     recognition.onresult = function (e) {
@@ -61,4 +61,4 @@ function translate() {
   });
 
 }
->>>>>>> 6562c81166179ae62b1000ba1ef0bce786736991
+
