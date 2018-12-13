@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var app =angular.module("FirebaseApp",["ngRoute","firebase"])
 app.config(["$routeProvider",function($routeProvider){
     $routeProvider
