@@ -444,3 +444,36 @@ body {
 .row-2{
     background-color: #fff
 }
+#btn{
+    width: 100%;
+    margin: 0 auto;
+}
+title{
+    position: absolute;
+    top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+}
+
+.title h2{
+    color: #fff;
+    font-size: 38px;
+}
+.button{
+   position: absolute;
+   top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.btnH{
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.btnH:hover{
+   background-color: #fff;
+   color: 000;
+}

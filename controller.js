@@ -72,6 +72,11 @@ app.controller("AuthCtrl", ["$scope", "$location","$firebaseAuth", function ($sc
 }])
 app.controller("control1", function ($scope) {
 
+    document.body.style.backgroundImage = 'url("natur.jpg")';
+    document.body.style.backgroundSize ='cover';
+    document.body.style.backgroundAttachment='fixed';
+
+
     $scope.startRecording = function () {
       startRecording();
     }
@@ -103,4 +108,54 @@ app.controller("control1", function ($scope) {
       });
     }
   })
+
+  app.controller('AfCtrl', ['$scope', '$http', function ($scope, $http) {
+    document.body.style.backgroundImage = 'url("3313819049.jpg")';
+    document.body.style.backgroundSize ='cover';
+    document.body.style.backgroundAttachment='fixed';
+    $http.get("https://api.arbetsformedlingen.se/af/v0/platsannonser/soklista/lan")
+        .then(function (data) {
+            $scope.lan = data.data.soklista.sokdata;
+            $scope.selected = $scope.lan[0]
+            $scope.changeLan = function () {
+                $http.get("https://api.arbetsformedlingen.se/af/v0/platsannonser/soklista/kommuner?lanid=" + $scope.selected.id)
+                    .then(function (data) {
+                        $scope.kommuner = data.data.soklista.sokdata;
+                        if ($scope.kommuner[0]) {
+                            $scope.selectedKommun = $scope.kommuner[0]
+                        }
+                    });
+            }
+        });
+    $http.get("https://api.arbetsformedlingen.se/af/v0/platsannonser/soklista/yrkesomraden")
+        .then(function (data) {
+            $scope.yrkes = data.data.soklista.sokdata;
+            $scope.selectedYrkes = $scope.yrkes[0]
+            $scope.changeYrke = function () {
+                $http.get("https://api.arbetsformedlingen.se/af/v0/platsannonser/soklista/yrkesgrupper?yrkesomradeid="+ $scope.selectedYrkes.id)
+                .then(function (data) {
+                    $scope.yrkesGrupper = data.data.soklista.sokdata;
+                    $scope.selectedYrkesGrupper= $scope.yrkesGrupper[0]                    
+                });
+            }
+        });
+
+   $scope.run = ()=>{
+    if($scope.selectedKommun.id && $scope.selectedYrkesGrupper.id){
+        console.log($scope.selectedKommun.namn, $scope.selectedYrkesGrupper.namn)
+    var url = "https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?kommunid="+$scope.selectedKommun.id+"&nyckelord="+$scope.selectedYrkesGrupper.namn+" "+$scope.selectedKommun.namn;
+    $http.get(url)
+        .then(function (data) {
+            var data1 = data.data.matchningslista;
+            var annonser1 = data1.matchningdata;
+            $scope.annonser = annonser1;
+            console.log(data)
+        });
+    }
+   }
+   
+
+
+    
+}]);
   

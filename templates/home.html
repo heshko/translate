@@ -1,9 +1,9 @@
-<h1>Welcome</h1>
-<div ng-show="user">
-    <h1>Welcome {{user.displayName}}</h1>
-    
-<a href="#!/translate">translate</a>
-<a href="#!/arbetsförmdligen">arbetsförmedligen</a>
+<div class="title" ng-show="user">
+    <h2>Welcome {{user.displayName}} to brothers webbsida</h2>
+</div>
+<div class="button">
+    <a href="#!/translate" class="btnH">Translate</a>
+    <a href="#!/arbetsförmdligen" class="btnH">Arbetsförmedlingen</a>
 </div>
 <div ng-hide="user">
     <h1>please sign In</h1>

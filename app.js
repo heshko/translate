@@ -17,6 +17,10 @@ app.config(["$routeProvider",function($routeProvider){
         templateUrl:"translate.html",
         controller:"control1"
     })
+    .when('/arbetsförmdligen', {
+        templateUrl: 'templates/arbetsförmedlingen.html',
+        controller: 'AfCtrl'
+    })
     
     
 }])
