@@ -1,4 +1,4 @@
-<div ng-controller="control1">
+<!--<div ng-controller="control1">
     <form   method="get"  >
       <div class="speech">
         <select id="chang-språk-1">
@@ -22,4 +22,73 @@
      <br>
      <input id="button" type="button"  >
     </form>
+</div>-->
+
+<header>
+  <div class="roow-navbar">
+    <div class="navbar">
+      <a href="#" class="navbar--link">
+        <img class="navbar--logo" src="https://image.flaticon.com/icons/svg/1028/1028943.svg" width="40px" height="40px"
+          alt="">
+        <p class="navbar--text">Translator</p>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<div class="row-2">
+<main>
+  <div class="rooow-changlanguages">
+    <div class="cool-6-languages1">
+      <select class="languages" id="chang-språk-2">
+        <option value="ar">Arabic</option>
+        <option value="en">English</option>
+        <option value="sv">Swedish</option>
+      </select>
+    </div>
+    <div class="cool-6-languages1">
+      <select class="languages" id="chang-språk-3">
+        <option value="ar">Arabic</option>
+        <option value="en">English</option>
+        <option value="sv">Swedish</option>
+      </select>
+    </div>
+    <div class="coool-6-textArea1">
+      <textarea class="translateTextarea1" id="transcript" spellcheck="false" autocapitalize="off" autocomplete="off"
+        autocorrect="off" placeholder="Type text" rows="1"></textarea>
+      <div class="cool-12-voiceDiv">
+        <div class="voice">
+          <img class="img-StartRecording" ng-click="startRecording()" src="https://ssl.gstatic.com/images/icons/material/system_gm/1x/mic_black_24dp.png">
+
+
+          <select id="chang-språk-1">
+            <option value="ar">Arabic</option>
+            <option value="en">English</option>
+            <option value="sv">Swedish</option>
+          </select>
+          <img class="translateButton" width="30px" height="30px" id="button" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/512/sign-right-icon.png"></img>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="cooool-6-textArea2">
+      <textarea class="translateTextarea2" readonly placeholder="Translation" id="resultText"></textarea>
+      <div class="cool-12-voiceDiv">
+        <div class="voicce">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="roooow-img">
+    <img src="https://www.pandatree.com/images/book/book-link01.jpg" alt="" class="img2">
+
+   
+  </div>
+</main>
+
+<footer>
+  <div class="rooooow-footer"></div>
+</footer>
 </div>
