@@ -2,13 +2,16 @@ var app = angular.module("FirebaseApp");
 app.controller("firstController", ["$scope","$firebaseAuth", function ($scope, $firebaseAuth) {
     console.log($firebaseAuth())// firebaseAuth det här method låta mig att göra mång function som log in och signout och signUp
     $firebaseAuth().$onAuthStateChanged(function(user){ //الطريقة الموصى بها للحصول على المستخدم الحالي هي عن طريق تعيين مراقب على كائن المصادقة:
-console.log(user)
+
 if(user){
     $scope.user= user;
 }else{
     $scope.user= null;
 }
     })
+    document.body.style.backgroundImage = "url('people.jpg')";
+    document.body.style.backgroundSize ='cover';
+    document.body.style.backgroundAttachment='fixed';
 }]);
 app.controller("SignUpController", ["$scope", "$firebaseAuth", "$location", function ($scope, $firebaseAuth, $location) {
 
@@ -41,7 +44,8 @@ app.controller("SignUpController", ["$scope", "$firebaseAuth", "$location", func
             });
     };
 
-
+    document.body.style.backgroundImage = "url('people.jpg')"
+ 
 }]);    
 app.controller("loginController", ["$scope", "$firebaseAuth", "$location", function ($scope, $firebaseAuth, $location) {
     $scope.login = function (user) {
@@ -53,7 +57,7 @@ app.controller("loginController", ["$scope", "$firebaseAuth", "$location", funct
             $scope.error = err.message;
         })      
     };
-
+    document.body.style.backgroundImage = "url('people.jpg')"
 }]);
 app.controller("AuthCtrl", ["$scope", "$location","$firebaseAuth", function ($scope, $location,$firebaseAuth) {
     $firebaseAuth().$onAuthStateChanged(function(user){ // $onAuthStateChanged visar om iloggad eller outloggad 
@@ -72,9 +76,8 @@ app.controller("AuthCtrl", ["$scope", "$location","$firebaseAuth", function ($sc
 }])
 app.controller("control1", function ($scope) {
 
-    document.body.style.backgroundImage = 'url("natur.jpg")';
-    document.body.style.backgroundSize ='cover';
-    document.body.style.backgroundAttachment='fixed';
+    document.body.style.backgroundColor = "#FFF";
+    
 
 
     $scope.startRecording = function () {

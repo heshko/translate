@@ -1,7 +1,6 @@
 
 body{
-    margin: 0;
-    padding: 0;
+    
     background: url('natur2.jpg');
     background-size: cover;
     font-family: sans-serif;
@@ -79,25 +78,19 @@ h1{
 .loginbox a:hover{
     color: #ffc107;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background: url('https://cdn.pixabay.com/photo/2018/11/06/14/01/pair-3798371_1280.jpg');
-    background-size: cover;
-    font-family: sans-serif;
 
-}
 .loginbox{
     width: 320px;
     height: 420px;
     background: #000;
     color: #fff;
-    top: 50%;
+    top: 60%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 100px 40px;
+    opacity: 0.7;
 }
 
 .avatar{
@@ -160,14 +153,10 @@ h1{
 .loginbox a:hover{
     color: #ffc107;
 }
-body{
-    background: url('sign-up.jpg');
-    background-size: cover;
-    font-family: Arial;
-}
+
 .wrap{
     max-width: 350px;
-    border-radius: 20px;
+   
     margin: auto;
     background: rgba(0,0,0,0.8);
     box-sizing: border-box;
@@ -211,30 +200,27 @@ input[type=submit]:hover{
 }
 
 
-body {
-    margin: 0%;
+
  
- }
+.navbarTranslate {
+    padding-top: 20px;
+}
  
- .navbar {
-    height: 40px;
- }
- 
- .navbar--link {
+ .navbarTranslate--link {
     text-decoration: none;
  }
  
- .navbar--link:hover {
+ .navbarTranslate--link:hover {
     text-decoration: none;
     color: #e91802;
  }
  
- .navbar--logo {
+ .navbarTranslate--logo {
     display: inline-block;
     vertical-align: middle;
     padding-left: 12px;
  }
- .navbar--text {
+ .navbarTranslate--text {
     margin: 0%;
     display: inline-block;
     font-family: 'Product Sans',Arial,sans-serif;
@@ -243,14 +229,14 @@ body {
     padding-left: 10px;
     vertical-align: middle;
  }
- .navbar--text:hover {
+ .navbarTranslate--text:hover {
     text-decoration: none;
     color: #e91802;
  }
  
  .languages {
-    background-color:#000536;
-    color: #ffffff;
+    background-color:white;
+    color: black;
     height: 30px;
     width: 120px;
     border-style: none;
@@ -343,7 +329,7 @@ body {
  .rooow-changlanguages {
     width: 100%;
     height: 300px;
-    background-image: url("https://images.pexels.com/photos/953214/pexels-photo-953214.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    background-image: url("background.jpg")
 
   };
  
@@ -355,10 +341,7 @@ body {
     padding: 0 100px 35px 100px;
  }
  
- .rooooow-footer {
-    height: 30px;
-    background-color: #000536;
- }
+
  
  .cool-6-languages1 {
     width: 50%;
@@ -391,8 +374,9 @@ body {
     width: 50%;
     text-align: left;
  }
+
  @media screen and (max-width: 700px) {
- 
+    
     .cool-6-languages1 {
         width: 50%;
         float: left;
@@ -471,9 +455,116 @@ title{
     padding: 10px 30px;
     color: white;
     text-decoration: none;
-    transition: 0.6s ease;
+    
+  margin-top: 40px  ;
+  margin-right: 10px;
+    background-color: #0000006e;
 }
+#page-button{
+    padding-left: 40%;
+    margin-right: 0px;
+    
+}
+
 .btnH:hover{
    background-color: #fff;
    color: 000;
 }
+#brothers{
+    color: #c1af9b;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    
+}
+.btnH{
+    display: none;
+
+}
+.click-here{
+    text-align: center
+}
+.click{
+    background-color: #000;
+    color: #ffffff;
+   
+}
+
+ 
+ 
+ .navbar-image {
+    background: url("people.jpg");
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+ }
+ 
+ .navbar-light .navbar-brand {
+    color: #fff;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+ }
+ #nav{
+    background-color: #18140b;
+ }
+ 
+ #nav li a {
+    font-weight: 600;
+    font-size: 16px;
+ 
+ }
+ 
+ .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #fff;
+ }
+ 
+ .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+ }
+ 
+ .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+ }
+ 
+ .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: #fff;
+ }
+ 
+ #nav.change {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 60px;
+    padding-top: 0px;
+ }
+ 
+ #nav.change.navbar-light .navbar-brand {
+    font-size: 20px;
+    padding: 12px 0px 0px 20px;
+ }
+ 
+ #nav.change li a {
+    font-size: 16px;
+    padding-top: 20px;
+ }
+
+ .about-v{
+    border: 1px solid #Fff;
+    background-color: #00000052;
+ }
+ .about-v h5{
+    color: #fff;
+ }
+ 
+ .about-v nav ul li{
+    list-style: none;
+ }
+ 
+ .about-v nav ul li a{
+    color: #efefef;
+    
+ }
+ #footer{
+     position: absolute;
+     top: 100%
+ }
