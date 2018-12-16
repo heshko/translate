@@ -25,16 +25,5 @@ app.config(["$routeProvider",function($routeProvider){
     
 }])
 
-$(document).ready(function(){
-    $(window).click(function(){
-        $("#brothers").css({
-            color:"#1b1209"
-        }).animate({
-            marginTop:"10%", 
-        });
-        $(".btnH").fadeIn(4000)({
-        }) 
-    })
-    })
-    
+
     

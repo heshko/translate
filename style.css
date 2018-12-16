@@ -1,10 +1,7 @@
 
-body{
-    
-    background: url('natur2.jpg');
-    background-size: cover;
-    font-family: sans-serif;
-}
+* {
+    box-sizing: border-box;
+ }
 .loginbox{
     width: 320px;
     height: 420px;
@@ -90,7 +87,7 @@ h1{
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 100px 40px;
-    opacity: 0.7;
+    background-color: #00000087;
 }
 
 .avatar{
@@ -156,13 +153,12 @@ h1{
 
 .wrap{
     max-width: 350px;
-   
     margin: auto;
-    background: rgba(0,0,0,0.8);
     box-sizing: border-box;
     padding: 40px;
     color: #fff;
     margin-top: 100px;
+    background-color: #00000087;
 }
 h2{
     text-align: center;
@@ -171,7 +167,7 @@ input[type=text],input[type=password]{
     width: 100%;
     box-sizing: border-box;
     padding: 12px 5px;
-    background: rgba(0,0,0,0.10);
+    background: rgba(12, 12, 12, 0.5);
     outline: none;
     border: none;
     border-bottom:1px dotted #fff;
@@ -249,7 +245,7 @@ input[type=submit]:hover{
     width: 76%;
     resize: none;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     color: black;
     font-size: 20px;
     font-family: 'Roboto',arial,sans-serif;
@@ -264,7 +260,7 @@ input[type=submit]:hover{
     width: 76%;
     resize: none;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     color: black;
     font-size: 20px;
     font-family: 'Roboto',arial,sans-serif;
@@ -315,9 +311,7 @@ input[type=submit]:hover{
     background-color: white;
  
  }
- * {
-    box-sizing: border-box;
- }
+ 
  
  .roow-navbar {
     padding-top: 12px;
@@ -428,10 +422,6 @@ input[type=submit]:hover{
 .row-2{
     background-color: #fff
 }
-#btn{
-    width: 100%;
-    margin: 0 auto;
-}
 title{
     position: absolute;
     top: 50%;
@@ -461,14 +451,14 @@ title{
     background-color: #0000006e;
 }
 #page-button{
-    padding-left: 40%;
-    margin-right: 0px;
+justify-content: center;
     
 }
 
 .btnH:hover{
    background-color: #fff;
-   color: 000;
+   color: #000;
+   text-decoration: none;
 }
 #brothers{
     color: #c1af9b;
@@ -479,17 +469,7 @@ title{
     display: none;
 
 }
-.click-here{
-    text-align: center
-}
-.click{
-    background-color: #000;
-    color: #ffffff;
-   
-}
 
- 
- 
  .navbar-image {
     background: url("people.jpg");
     height: 500px;
@@ -558,6 +538,7 @@ title{
  
  .about-v nav ul li{
     list-style: none;
+    color: #efefef;
  }
  
  .about-v nav ul li a{
@@ -568,3 +549,5 @@ title{
      position: absolute;
      top: 100%
  }
+
+ 

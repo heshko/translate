@@ -1,6 +1,6 @@
 var app = angular.module("FirebaseApp");
 app.controller("firstController", ["$scope","$firebaseAuth", function ($scope, $firebaseAuth) {
-    console.log($firebaseAuth())// firebaseAuth det här method låta mig att göra mång function som log in och signout och signUp
+// firebaseAuth det här method låta mig att göra mång function som log in och signout och signUp
     $firebaseAuth().$onAuthStateChanged(function(user){ //الطريقة الموصى بها للحصول على المستخدم الحالي هي عن طريق تعيين مراقب على كائن المصادقة:
 
 if(user){
@@ -12,6 +12,7 @@ if(user){
     document.body.style.backgroundImage = "url('people.jpg')";
     document.body.style.backgroundSize ='cover';
     document.body.style.backgroundAttachment='fixed';
+    document.body.style.backgroundRepeat='no-repeat';
 }]);
 app.controller("SignUpController", ["$scope", "$firebaseAuth", "$location", function ($scope, $firebaseAuth, $location) {
 
@@ -45,6 +46,8 @@ app.controller("SignUpController", ["$scope", "$firebaseAuth", "$location", func
     };
 
     document.body.style.backgroundImage = "url('people.jpg')"
+    document.body.style.backgroundSize ='cover';
+    document.body.style.backgroundAttachment='fixed';
  
 }]);    
 app.controller("loginController", ["$scope", "$firebaseAuth", "$location", function ($scope, $firebaseAuth, $location) {
@@ -58,6 +61,8 @@ app.controller("loginController", ["$scope", "$firebaseAuth", "$location", funct
         })      
     };
     document.body.style.backgroundImage = "url('people.jpg')"
+    document.body.style.backgroundSize ='cover';
+    document.body.style.backgroundAttachment='fixed';
 }]);
 app.controller("AuthCtrl", ["$scope", "$location","$firebaseAuth", function ($scope, $location,$firebaseAuth) {
     $firebaseAuth().$onAuthStateChanged(function(user){ // $onAuthStateChanged visar om iloggad eller outloggad 
@@ -113,7 +118,7 @@ app.controller("control1", function ($scope) {
   })
 
   app.controller('AfCtrl', ['$scope', '$http', function ($scope, $http) {
-    document.body.style.backgroundImage = 'url("3313819049.jpg")';
+    document.body.style.backgroundImage = 'url("arbetsformedlingen-skylt1.jpg")';
     document.body.style.backgroundSize ='cover';
     document.body.style.backgroundAttachment='fixed';
     $http.get("https://api.arbetsformedlingen.se/af/v0/platsannonser/soklista/lan")
@@ -145,14 +150,12 @@ app.controller("control1", function ($scope) {
 
    $scope.run = ()=>{
     if($scope.selectedKommun.id && $scope.selectedYrkesGrupper.id){
-        console.log($scope.selectedKommun.namn, $scope.selectedYrkesGrupper.namn)
     var url = "https://api.arbetsformedlingen.se/af/v0/platsannonser/matchning?kommunid="+$scope.selectedKommun.id+"&nyckelord="+$scope.selectedYrkesGrupper.namn+" "+$scope.selectedKommun.namn;
     $http.get(url)
         .then(function (data) {
             var data1 = data.data.matchningslista;
             var annonser1 = data1.matchningdata;
             $scope.annonser = annonser1;
-            console.log(data)
         });
     }
    }
@@ -161,4 +164,19 @@ app.controller("control1", function ($scope) {
 
     
 }]);
+$(document).ready(function(){
+    $(window).click(function(){
+        $("#brothers").css({
+            color:"#1b1209"
+        }).animate({
+            marginTop:"10%",
+        });
+        
+    })
+    $(window).click(function(){
+        $(".btnH").fadeIn(4000)
+        
+    })
+    })
+    
   

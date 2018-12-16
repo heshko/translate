@@ -1,19 +1,19 @@
-<main class="container mt-5">
-  <div class="row">
+<main class="container d-flex justify-content-center mt-5">
+  <form>
   <select name="mySelect" id="mySelect" ng-options="option.namn for option in lan track by option.id" ng-model='selected'
-      ng-change='changeLan()' class="col-lg-3 col-md-12"></select>
+      ng-change='changeLan()' class="form-control mt-1"></select>
   
       
-  <select name="mySelect1" id="mySelect1" ng-options="option.namn for option in kommuner track by option.id" ng-model='selectedKommun' ng-hide="!selectedKommun" class="col-lg-3 col-md-12"> 
+  <select name="mySelect1" id="mySelect1" ng-options="option.namn for option in kommuner track by option.id" ng-model='selectedKommun' ng-hide="!selectedKommun" class="form-control mt-1"> 
   </select>
-  <select name="mySelect2" id="mySelect2" ng-options="option.namn for option in yrkes track by option.id" ng-model='selectedYrkes' ng-change='changeYrke()' class="col-lg-3 col-md-12">
+  <select name="mySelect2" id="mySelect2" ng-options="option.namn for option in yrkes track by option.id" ng-model='selectedYrkes' ng-change='changeYrke()' class="form-control mt-1">
       <!--<option ng-repeat="yrke in yrkes" id={{name.id}}>{{yrke.namn}}</option>-->
   </select>
-  <select name="mySelect3" id="mySelect3" ng-options="option.namn for option in yrkesGrupper track by option.id" ng-model='selectedYrkesGrupper' ng-hide="!selectedYrkesGrupper" class="col-lg-3 col-md-12"></select>
-  </div>
+  <select name="mySelect3" id="mySelect3" ng-options="option.namn for option in yrkesGrupper track by option.id" ng-model='selectedYrkesGrupper' ng-hide="!selectedYrkesGrupper" class="form-control mt-1"></select>
+  </form>
   </main>
-  <div class="container">
-  <button ng-click = 'run()' id="btn">Hitta</button>
+  <div class="container d-flex justify-content-center">
+  <button ng-click = 'run()' class="btn mt-1" id="btn">Hitta</button>
   </div>
   
   <main class="container mt-5" ng-repeat="annons in annonser" >
